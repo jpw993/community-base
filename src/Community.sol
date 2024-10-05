@@ -125,6 +125,6 @@ contract Community is
         override(Governor, GovernorTimelockControl)
         returns (bool)
     {
-        super.supportsInterface(interfaceId);
+        return super.supportsInterface(interfaceId);
     }
 }
