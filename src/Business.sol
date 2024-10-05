@@ -22,7 +22,10 @@ contract Business is Ownable, ERC20 {
         return manager.transfer(amt);
     }
 
-    function purchase() external payable {
+    event ItemPuchased(string itemName);
+
+    function purchase(string memory itemName) external payable {
+        emit ItemPuchased(itemName);
         // give the customer one loyal point for this purchase
         super._mint(msg.sender, 1);
     }
