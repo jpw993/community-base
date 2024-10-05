@@ -8,7 +8,7 @@ contract Business is Ownable, ERC20 {
     address payable public immutable manager;
 
     constructor(address _manager, string memory _businessName, string memory _tokenCode)
-        Ownable(_manager)
+        Ownable()
         ERC20(_businessName, _tokenCode)
     {
         manager = payable(_manager);

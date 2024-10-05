@@ -26,13 +26,16 @@ contract CommunityDAOTest is Test {
         // Deploy a simple ERC20Votes token for voting
         token = new CommunityToken();
 
-        // Mint tokens to voters
-        token.mint(address(this), 100 ether);
-        token.mint(address(1), 100 ether);
-        token.mint(address(2), 100 ether);
+        // transfer tokens to voters
+        token.transfer(address(this), 100 ether);
+        token.transfer(address(1), 100 ether);
+        token.transfer(address(2), 100 ether);
+
+        address[] memory admins = new address[](1);
+        admins[0] = address(this);
 
         // Deploy TimelockController (delay of 2 days)
-        timelock = new TimelockController(2 days, new address, new address);
+        timelock = new TimelockController(2 days, admins, admins, admins[0]);
 
         // Deploy the DAO contract
         communityDao = new Community(token, timelock);
