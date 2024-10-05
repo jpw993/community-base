@@ -16,7 +16,7 @@ import "../src/CommunityToken.sol";
 
 contract CommunityDAOTest is Test {
     Community public communityDao;
-    ERC20Votes public token;
+    CommunityToken public token;
     TimelockController public timelock;
     address public owner;
     address public addr1;
