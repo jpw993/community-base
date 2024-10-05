@@ -7,11 +7,8 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract Business is Ownable, ERC20 {
     address payable public immutable manager;
 
-    constructor(address _manager, string memory _businessName, string memory _tokenCode)
-        Ownable()
-        ERC20(_businessName, _tokenCode)
-    {
-        manager = payable(_manager);
+    constructor(string memory _businessName, string memory _tokenCode) Ownable() ERC20(_businessName, _tokenCode) {
+        manager = payable(msg.sender);
     }
 
     function decimals() public pure override(ERC20) returns (uint8) {
