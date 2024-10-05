@@ -3,6 +3,7 @@ pragma solidity ^0.8.24;
 
 import "forge-std/Test.sol";
 import "@openzeppelin/contracts/governance/Governor.sol";
+import "@openzeppelin/contracts/governance/IGovernor.sol";
 import "@openzeppelin/contracts/governance/extensions/GovernorSettings.sol";
 import "@openzeppelin/contracts/governance/extensions/GovernorCountingSimple.sol";
 import "@openzeppelin/contracts/governance/extensions/GovernorVotes.sol";
@@ -67,7 +68,7 @@ contract CommunityDAOTest is Test {
 
         calldatas[0] = abi.encodeWithSignature("votingPeriod()");
 
-        string memory description = "Proposal #1: Change voting period";
+        string memory description = "Proposal #1: Add John's Bakery";
 
         uint256 proposalId = communityDao.propose(targets, values, calldatas, description);
 
@@ -93,11 +94,5 @@ contract CommunityDAOTest is Test {
         // Queue the proposal for execution
         bytes32 descriptionHash = keccak256(abi.encodePacked(description));
         communityDao.queue(targets, values, calldatas, descriptionHash);
-
-        // Execute the proposal
-        // communityDao.execute(targets, values, calldatas, descriptionHash);
-
-        // // Assert the proposal is executed (Executed state)
-        // assertEq(uint256(communityDao.state(proposalId)), 7);
     }
 }
