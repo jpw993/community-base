@@ -13,12 +13,12 @@ contract BusinessTest is Test {
 
     function setUp() public {
         vm.prank(manager);
-        business = new Business(manager, "My Business", "BUS");
+        business = new Business(manager, "John's Bakery", "JBK");
     }
 
     function testInitialValues() public {
-        assertEq(business.name(), "My Business");
-        assertEq(business.symbol(), "BUS");
+        assertEq(business.name(), "John's Bakery");
+        assertEq(business.symbol(), "JBK");
         assertEq(business.manager(), manager);
         assertEq(business.decimals(), 18);
     }
