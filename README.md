@@ -67,3 +67,6 @@ $ cast --help
 ### Prototype
 Version1 </br>
 ![](https://github.com/jpw993/community-base/blob/main/Demo1.gif)
+
+Version2 </br>
+![](https://github.com/jpw993/community-base/blob/main/DemoVer2.gif)
