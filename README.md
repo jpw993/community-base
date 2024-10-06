@@ -1,70 +1,22 @@
-## Foundry
+## CommuityBase
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+**CommunityBase promotes customer spending in local businesses through automated digital rewards. Using the Base blockchain we support secure digital payments, with automated transfer of rewards.**
 
-Foundry consists of:
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Demo Video
 
-## Documentation
+https://youtu.be/7MJ_N5jt7DQ
 
-https://book.getfoundry.sh/
+## Base Sepolia Deployment
 
-## Usage
+https://sepolia.basescan.org/address/0xc91fcb9ddd574f70c5c9594d1d0ac76c643a5082
 
-### Build
+### Presentation
 
-```shell
-$ forge build
-```
+https://www.canva.com/design/DAGStveOdjU/iL94feDjLOH2i-DYsIzBpw/view
 
-### Test
 
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
-### Prototype
+### GUI Prototype
 Version1 </br>
 ![](https://github.com/jpw993/community-base/blob/main/Demo1.gif)
 
